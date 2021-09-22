@@ -3,8 +3,11 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        Greeting aGreeting = null;
         if (args.length>0)
-            System.out.println("Ciao "+args[0]);
-        else System.out.println("Ciao Mondo");
+            aGreeting = new Greeting(args[0]);
+        else
+            aGreeting = new Greeting("Loris");
+        System.out.println(aGreeting.sayHello());
     }
 }
